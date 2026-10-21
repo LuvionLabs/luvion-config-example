@@ -1,0 +1,33 @@
+{
+  "name": "luvion-config-example",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "build": "node scripts/compile.mjs",
+    "test": "node review/check.mjs"
+  },
+  "devDependencies": {
+    "@layerzerolabs/lz-evm-messagelib-v2": "3.0.168",
+    "@layerzerolabs/lz-evm-protocol-v2": "3.0.168",
+    "@layerzerolabs/lz-evm-v1-0.7": "3.0.168",
+    "@layerzerolabs/oapp-evm": "0.4.1",
+    "@openzeppelin/contracts": "4.9.6",
+    "@safe-global/safe-smart-account": "1.5.0",
+    "solc": "0.8.36",
+    "solidity-bytes-utils": "0.8.4"
+  },
+  "dependencies": {
+    "@noble/curves": "1.4.0",
+    "@noble/hashes": "1.4.0",
+    "ethers": "6.17.0",
+    "hardhat": "3.12.0"
+  },
+  "overrides": {
+    "ws": "8.21.0",
+    "tmp": "0.2.7"
+  }
+}

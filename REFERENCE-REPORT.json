@@ -1,0 +1,114 @@
+{
+  "schema": 1,
+  "generatedAt": "2026-10-21T14:10:29.347Z",
+  "scope": "Local contract checks, not a full Luvion or hosted-session test",
+  "compilation": {
+    "compiler": "0.8.36+commit.8a079791.Emscripten.clang",
+    "viaIR": true,
+    "optimizerRuns": 200,
+    "evmVersion": "cancun",
+    "contracts": [
+      "EndpointV2",
+      "ReceiveUln302",
+      "ConfigOnlyOApp",
+      "LuvionConfigGate",
+      "LuvionClientConfigGate",
+      "Safe",
+      "SafeProxy",
+      "BridgeAdminFixture"
+    ]
+  },
+  "sourceHashes": {
+    "contracts/Fixtures.sol": "4a5e289f729a5a986d5c85b6b8d1fee4fe61afce05157510e611087eeed32f8c",
+    "contracts/LuvionConfigGate.sol": "e02c3316eaaf9e78f8044b854e5c34332ec190c04eafb59939c727c18e2a17a3",
+    "contracts/LuvionClientConfigGate.sol": "ba407a053f2a5c9fc59f342053623ee0d12545a6e7d732caadcff6a5eaa99089",
+    "scripts/compile.mjs": "d8b9e5d9b182b12bffc7e6092bb88f80ecf598e1935644105cccf609bb8b5817",
+    "hardhat.config.js": "aea212b7695962092376985ec32c53696283105b123226fa06b363e61e05e49f",
+    "package.json": "89085ca937696c1bc1b7a4f722fade8fd723a5677ff18de120242935568603b0",
+    "package-lock.json": "978429a9deaef3d88e5189f83c49fe62ebc21a5da2f271ad902ecff98d0eadff",
+    "review/check.mjs": "bb051354cdf67428a761a5cb6912dcf57bbf52542d32687b0f409ccaf54e0192"
+  },
+  "results": [
+    {
+      "id": "migration-old-delegate-still-has-access-before-activation",
+      "result": "passed"
+    },
+    {
+      "id": "old-delegate-rejected-after-activation",
+      "result": "passed"
+    },
+    {
+      "id": "old-owner-cannot-replace-delegate",
+      "result": "passed"
+    },
+    {
+      "id": "wrong-local-attestation-rejected",
+      "result": "passed"
+    },
+    {
+      "id": "missing-issuer-approval-rejected",
+      "result": "passed"
+    },
+    {
+      "id": "missing-operator-approval-rejected",
+      "result": "passed"
+    },
+    {
+      "id": "changed-payload-rejected",
+      "result": "passed"
+    },
+    {
+      "id": "resigned-payload-required",
+      "result": "passed"
+    },
+    {
+      "id": "no-schedule-no-execution",
+      "result": "passed"
+    },
+    {
+      "id": "waiting-period-enforced",
+      "result": "passed"
+    },
+    {
+      "id": "changed-execution-payload-rejected",
+      "result": "passed"
+    },
+    {
+      "id": "approved-change-executes-and-effective-config-matches",
+      "result": "passed"
+    },
+    {
+      "id": "execution-replay-rejected",
+      "result": "passed"
+    },
+    {
+      "id": "revoked-request-cannot-be-scheduled",
+      "result": "passed"
+    },
+    {
+      "id": "safe-2-of-2-missing-party-rejected",
+      "result": "passed"
+    },
+    {
+      "id": "safe-also-binds-signatures-to-exact-calldata",
+      "result": "passed"
+    },
+    {
+      "id": "safe-2-of-2-approved-change-executes",
+      "result": "passed"
+    }
+  ],
+  "localExecution": {
+    "transaction": "0x98ce55f374249914bcdb2370c199a85e2c3b0c721a6d8c09a8673c3869737782",
+    "block": 16,
+    "chainId": 31337
+  },
+  "limitations": [
+    "Synthetic ECDSA attester; no FROST verification in this standalone kit",
+    "All test keys controlled by one local process; no independent institutions",
+    "No customer contracts, bridge transfers, public-chain transactions, recovery or audit",
+    "Safe 2-of-2 satisfies this two-party approval example too; no superiority or integration-cost claim",
+    "Activation migration has an old-delegate bypass window; not a production migration plan",
+    "These checks do not exhaust all bypasses or upstream protocol risks"
+  ]
+}
